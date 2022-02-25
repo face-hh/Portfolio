@@ -9,9 +9,15 @@ app.use("/img", express.static("img"))
 app.use("/static", express.static("static"))
 
 app.get("/", (_req, res) => {
-    console.log('got trafic!')
     res.sendFile(path.join(`${__dirname}/index.html`))
 })
 
-console.log(`${__dirname}/index.html`, process.env.PORT, process.env.$PORT)
-app.listen(process.env.PORT, () => console.log(`Live At http://facedev.xyz`));
+app.get("/e", (_req, res) => {
+    res.sendFile(path.join(`${__dirname} index.html`))
+})
+
+app.get("/ee", (_req, res) => {
+    res.sendFile(path.join(__dirname, `index.html`))
+})
+
+app.listen(process.env.PORT, () => console.log(`Live at http://facedev.xyz on port ${process.env.PORT}`));
