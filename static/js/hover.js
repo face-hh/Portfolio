@@ -16,7 +16,7 @@ test.addEventListener("mouseover", async (d) => {
     }
 
     if(itemName === '') return;
-    console.log(`/data/${itemName}.txt`)
+    console.log(`/data/${itemName}.txt`, itemName)
 
     const data = await populatePre(`/data/${itemName}.txt`);
     const content = getContent(data);
