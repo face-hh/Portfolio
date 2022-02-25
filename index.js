@@ -12,4 +12,5 @@ app.get("/", (_req, res) => {
     res.sendFile(path.join(__dirname, "index.html"))
 })
 
+console.log(__dirname, "index.html")
 app.listen(5000, () => console.log(`Live At http://facedev.xyz`));
