@@ -1,10 +1,6 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const passport = require("passport");
-
-passport.serializeUser((user, done) => done(null, user))
-passport.deserializeUser((obj, done) => done(null, obj))
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
