@@ -18,11 +18,6 @@ document.getElementById('paypal').addEventListener('click', function () {
     window.open('https://paypal.me/FaceDev', '_blank').focus();
 });
 
-setTimeout(async () => {
-    $('#preloader').fadeToggle();
-    update();
-}, 1500);
-
 setInterval(update, 10000);
 
 function update() {
