@@ -7,18 +7,7 @@ test.addEventListener("mouseover", async (d) => {
     .replace(/aria-describedby="tippy-6 tippy-7 tippy-23"/gi, '');
 
     if(itemName.startsWith('<li data-item="')){
-        let x = itemName.split('<li data-item="')[1].split('"')[3]
-
-        console.log(itemName.split('<li data-item="')[1].split('"'))
-        x = itemName.split('<li data-item="')[1].split('"')[2]
-
-        x = x
-        .replace('<img src="/assets/', '')
-        .replace('/assets/', '');
-
-        
-        itemName = x.includes('<img src="/assets/') ? x.split('<img src="/assets/')[0] : x
-        console.log({x})
+        itemName = itemName.split('<li data-item="')[1].split('"')[2]
     }
 
     if(itemName === '') return;
