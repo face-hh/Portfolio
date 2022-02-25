@@ -5,7 +5,7 @@ const path = require("path");
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-app.use("/img", express.static("img"))
+app.use("/assets", express.static("assets"))
 app.use("/static", express.static("static"))
 
 app.get("/", (_req, res) => {
