@@ -9,7 +9,7 @@ test.addEventListener("mouseover", async (d) => {
     if(itemName.startsWith('<li data-item="')){
         let x = itemName.split('<li data-item="')[1].split('"')[3]
 
-        console.log(itemName.split('<li data-item="')[1].split('"')[2])
+        console.log(itemName.split('<li data-item="')[1].split('"'))
         x = itemName.split('<li data-item="')[1].split('"')[2]
 
         x = x
