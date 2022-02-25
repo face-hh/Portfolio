@@ -13,5 +13,5 @@ app.get("/", (_req, res) => {
     res.sendFile(path.join(`${__dirname}/index.html`))
 })
 
-console.log(`${__dirname}/index.html`)
-app.listen(5000, () => console.log(`Live At http://facedev.xyz`));
+console.log(`${__dirname}/index.html`, process.env.PORT, process.env.$PORT)
+app.listen(process.env.$PORT, () => console.log(`Live At http://facedev.xyz`));
