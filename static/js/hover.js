@@ -9,6 +9,7 @@ test.addEventListener("mouseover", async (d) => {
     if(itemName.startsWith('<li data-item="')){
         let x = itemName.split('<li data-item="')[1].split('"')[3]
 
+        console.log(itemName.split('<li data-item="')[1].split('"'))
         if(x === '><img src=') x = itemName.split('<li data-item="')[1].split('"')[4]
         if(x === ' aria-describedby=') x = itemName.split('<li data-item="')[1].split('"')[5]
 
@@ -16,10 +17,12 @@ test.addEventListener("mouseover", async (d) => {
         .replace('<img src="/assets/', '')
         .replace('/assets/', '');
 
+        console.log({x})
         itemName = x.includes('</li>') ? x.split('</li>')[0].replace('>', '') : x
     }
 
     if(itemName === '') return;
+    console.log(`/data/${itemName}.txt`, itemName)
 
     const data = await populatePre(`/data/${itemName}.txt`);
     const content = getContent(data);
