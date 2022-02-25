@@ -9,9 +9,8 @@ test.addEventListener("mouseover", async (d) => {
     if(itemName.startsWith('<li data-item="')){
         let x = itemName.split('<li data-item="')[1].split('"')[3]
 
-        console.log(itemName.split('<li data-item="')[1].split('"'))
-        if(x === '><img src=') x = itemName.split('<li data-item="')[1].split('"')[4]
-        if(x === ' aria-describedby=') x = itemName.split('<li data-item="')[1].split('"')[5]
+        console.log(itemName.split('<li data-item="')[1].split('"')[2])
+        x = itemName.split('<li data-item="')[1].split('"')[2]
 
         x = x
         .replace('<img src="/assets/', '')
