@@ -14,4 +14,4 @@ app.get("/", (_req, res) => {
 })
 
 console.log(`${__dirname}/index.html`, process.env.PORT, process.env.$PORT)
-app.listen(process.env.$PORT, () => console.log(`Live At http://facedev.xyz`));
+app.listen(process.env.PORT, () => console.log(`Live At http://facedev.xyz`));
