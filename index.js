@@ -12,12 +12,4 @@ app.get("/", (_req, res) => {
     res.sendFile(path.join(`${__dirname}/index.html`))
 })
 
-app.get("/e", (_req, res) => {
-    res.sendFile(path.join(`${__dirname} index.html`))
-})
-
-app.get("/ee", (_req, res) => {
-    res.sendFile(path.join(__dirname, `index.html`))
-})
-
 app.listen(process.env.PORT, () => console.log(`Live at http://facedev.xyz on port ${process.env.PORT}`));
