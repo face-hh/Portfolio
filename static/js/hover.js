@@ -12,6 +12,8 @@ test.addEventListener("mouseover", async (d) => {
         if(x === '><img src=') x = itemName.split('<li data-item="')[1].split('"')[4]
         if(x === ' aria-describedby=') x = itemName.split('<li data-item="')[1].split('"')[5]
 
+        x = x.replace('/assets/', '');
+
         itemName = x.includes('</li>') ? x.split('</li>')[0].replace('>', '') : x
     }
 
