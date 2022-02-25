@@ -11,10 +11,7 @@ test.addEventListener("mouseover", async (d) => {
     }
 
     if(itemName === '') return;
-    if(itemName.includes('<img src="/assets/')) {
-        console.log('found img src, replaced and now its ' + `/data/${itemName}.txt`,)
-        itemName = itemName.replace('<img src="/assets/', '')
-    }
+    if(itemName.includes('<img src="/assets/')) itemName = itemName.replace('<img src="/assets/', '')
 
     const data = await populatePre(`/data/${itemName}.txt`);
     const content = getContent(data);
