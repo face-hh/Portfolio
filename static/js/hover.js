@@ -17,7 +17,7 @@ test.addEventListener("mouseover", async (d) => {
 
     if(itemName === '') return;
 
-    const data = await populatePre(`data/${itemName}.txt`);
+    const data = await populatePre(`/data/${itemName}.txt`);
     const content = getContent(data);
 
     tippy(`#${itemName}`, {
