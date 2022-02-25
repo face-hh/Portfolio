@@ -16,8 +16,9 @@ test.addEventListener("mouseover", async (d) => {
         .replace('<img src="/assets/', '')
         .replace('/assets/', '');
 
+        
+        itemName = x.includes('<img src="/assets/') ? x.split('<img src="/assets/')[0] : x
         console.log({x})
-        itemName = x.includes('</li>') ? x.split('</li>')[0].replace('>', '') : x
     }
 
     if(itemName === '') return;
