@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Face Dev</title>
+
+    <meta name="theme-color" content="#FF3366">
+    <meta property="og:image" content="/assets/avatar.png">
+    <meta property="og:url" content="https://facedev.xyz">
+    <meta property="og:title" content="Face Dev">
+    <meta property="og:description"
+        content="Face's portofolio! See there his creations, and more information about him!">
+    <link rel=icon href="/assets/avatar.png">
+
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css">
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <div class="py-1" style="background-color: #FF3366;"></div>
+
+    <div class="navbar padding mt-2">
+        
+        <img width="40" class="logo" draggable="false" style='border-radius:20px'
+            src="https://cdn.discordapp.com/avatars/778518819055861761/19b133c3accdd31f6e9508cacb3bae59.png">
+            <div class="ct padding mt-3 mb-4">
+                <div class="footer">
+                    <span style="float: right; font-size: 18px;">
+                        <i id="discord" class="fab fa-discord mr-3 text-gray-500"></i>
+                        <i id="github" class="fab fa-github mr-3 text-gray-500"></i>
+                        <i id="paypal" class="fab fa-paypal text-gray-500"></i>
+                    </span>
+                </div>
+            </div>
+        <span class="name">Face</span>
+    </div>
+    <div class="header padding">
+        <br></br>
+        <p class='hello' style="font-size: 90px;font-weight: 700; text-align: center;">I'm <span
+                style="color:#FF3366;">Face</span>!</p>
+
+        <p class="xd" style="font-size: 18px; text-align: center;">
+            a <b id="life" style="color:#FF3366;">...</b> years old NodeJS developer. Also doing commissions, take a
+            look below!<br>
+        </p>
+
+    </div>
+
+    <pre id="contents"></pre>
+
+    <div class="container">
+        <p class='hello' style="font-size: 50px;font-weight: 700; text-align: center; margin-top: 49px;">Showcase</p>
+
+        <ul class="filter-menu">
+            <li data-target="all">All</li>&nbsp;&nbsp;&nbsp;
+            <li data-target="db">Discord bots</li>&nbsp;&nbsp;&nbsp;
+            <li data-target="nodejs">NodeJS projects</li>&nbsp;&nbsp;&nbsp;
+            <li data-target="web">Websites</li>&nbsp;&nbsp;&nbsp;
+        </ul>
+
+        <ul class="filter-item" id='items'>
+            <li data-item="web" id='website'><img src="assets/website.png"></li>
+            <li data-item="db" id='arbitrage'><img src="assets/arbitrage.png"></li>
+            <li data-item="nodejs" id='mp4orgifcanvas'><img src="assets/mp4orgifcanvas.png"></li>
+            <li data-item="db" id='acolium'><img src="assets/acolium.png"></li>
+            <li data-item="nodejs" id='productfilter'><img src="assets/productfilter.png"></li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src='/static/js/main.js'></script>
+    <script src="/static/js/filter.js"></script>
+    <script src="/static/js/hover.js"></script>
+
+</body>
+
+</html>

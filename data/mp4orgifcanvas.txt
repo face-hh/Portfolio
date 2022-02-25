@@ -1,0 +1,2 @@
+title=<b style="color:#FF3366;">MP4 & GIF text writter</b>
+description=Splits the frames of an <b style="color:#FF3366;">MP4</b>, <b style="color:#FF3366;">writes text</b> on <b style="color:#FF3366;">each frame</b> and gathers them together into a <b style="color:#FF3366;">GIF</b> or <b style="color:#FF3366;">MP4</b>
