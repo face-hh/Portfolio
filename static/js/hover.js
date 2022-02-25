@@ -16,12 +16,10 @@ test.addEventListener("mouseover", async (d) => {
         .replace('<img src="/assets/', '')
         .replace('/assets/', '');
 
-        console.log({x})
         itemName = x.includes('</li>') ? x.split('</li>')[0].replace('>', '') : x
     }
 
     if(itemName === '') return;
-    console.log(`/data/${itemName}.txt`, itemName)
 
     const data = await populatePre(`/data/${itemName}.txt`);
     const content = getContent(data);
