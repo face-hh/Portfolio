@@ -18,6 +18,9 @@ document.getElementById('paypal').addEventListener('click', function () {
     window.open('https://paypal.me/FaceDev', '_blank').focus();
 });
 
+const life = new Date(Date.now()).getFullYear() - new Date(2007, 11, 29).getFullYear() - 1;
+document.getElementById('life');
+
 setInterval(update, 10000);
 
 function update() {
@@ -28,7 +31,4 @@ function update() {
     tippy('.logo', { delay: 100, placement: 'right', content: 'Damn you really like to hover everywhere!', });
     tippy('.name', { delay: 100, placement: 'left', content: 'AAAAAAAAA', });
     tippy('.xd', { delay: 100, placement: 'bottom', content: 'DM me if you\'re interested in hiring me!'})
-
-    const life = new Date(Date.now()).getFullYear() - new Date(2007, 11, 29).getFullYear() - 1;
-    document.getElementById('life').innerText = life;
 }
