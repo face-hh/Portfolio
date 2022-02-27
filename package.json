@@ -19,6 +19,7 @@
   "homepage": "https://github.com/face-hh/Portofolio#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "express-device": "^0.4.2",
     "path": "^0.12.7"
   }
 }
