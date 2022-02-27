@@ -18,9 +18,6 @@ document.getElementById('paypal').addEventListener('click', function () {
     window.open('https://paypal.me/FaceDev', '_blank').focus();
 });
 
-const life = new Date(Date.now()).getFullYear() - new Date(2007, 11, 29).getFullYear() - 1;
-document.getElementById('life');
-
 setInterval(update, 10000);
 
 function update() {
