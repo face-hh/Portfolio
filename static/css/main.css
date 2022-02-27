@@ -41,6 +41,11 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
+.fa-youtube:hover {
+    color: #ff0000;
+    cursor: pointer;
+}
+
 .fa-github:hover {
     color: #f700ff;
     cursor: pointer;
@@ -58,6 +63,11 @@ body::-webkit-scrollbar-thumb {
 
 .tippy-box[data-theme~='discord']{
     background: #5865f2;
+    color: #ffffff;
+}
+
+.tippy-box[data-theme~='youtube']{
+    background: #ff0000;
     color: #ffffff;
 }
 
