@@ -10,6 +10,7 @@ test.addEventListener("mouseover", async (d) => {
         itemName = itemName.split('<li data-item="')[1].split('"')[2]
     }
 
+    
     if(itemName === '') return;
     if(itemName.includes('<img src="/assets/')) itemName = itemName.replace('<img src="/assets/', '')
 
@@ -17,7 +18,6 @@ test.addEventListener("mouseover", async (d) => {
     const content = getContent(data);
 
     tippy(`#${itemName}`, {
-        delay: 50,
         theme: 'item',
         placement: 'right',
         allowHTML: true,
@@ -26,6 +26,8 @@ test.addEventListener("mouseover", async (d) => {
         `<br>`+
         `<p style="text-align: center;">${content.description}</p>`,
     });
+
+    console.log(`Did tippy on ${itemName}`)
 });
 
 async function populatePre(url) {
