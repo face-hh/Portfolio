@@ -1,0 +1,3 @@
+title=<b style="color:#FF3366;">One word story</b>
+description=A one word story game, everyone has to <b style="color:#FF3366;">>say 1 word</b and the game can be ended using <b style="color:#FF3366;">.</b>
+If it's not an english word, it's gonna get deleted, you can also type <b style="color:#FF3366;">cw</b> to get the exact <b style="color:#FF3366;">number</b> of all words!
