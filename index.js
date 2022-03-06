@@ -14,7 +14,7 @@ app.use("/static", express.static("static"))
 app.get("/", (req, res) => {
     const details = req.device.type.toUpperCase();
 
-    if (details === 'PHONE') {
+    if (details === 'MOBILE') {
         res.sendFile(path.join(`${__dirname}/mobile.html`))
     } else {
         res.sendFile(path.join(`${__dirname}/index.html`))
