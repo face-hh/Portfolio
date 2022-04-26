@@ -1,13 +1,19 @@
 let test = document.getElementById("items");
 
+function popup(item){
+    console.log(item)
+    var popup = document.getElementById(item);
+    popup.classList.toggle("show");
+}
+
 test.addEventListener("mouseover", async (d) => {
   let itemName = d.target.outerHTML
     .replace(/<img src="assets\//gi, '')
     .replace(/.png">/gi, '')
     .replace(/aria-describedby="tippy-6 tippy-7 tippy-23"/gi, '');
 
-    if(itemName.startsWith('<li data-item="')){
-        itemName = itemName.split('<li data-item="')[1].split('"')[2]
+    if(itemName.startsWith('<div data-item="')){
+        itemName = itemName.split('<div data-item="')[1].split('"')[2]
     }
 
     
@@ -16,6 +22,7 @@ test.addEventListener("mouseover", async (d) => {
 
     const data = await populatePre(`/data/${itemName}.txt`);
     const content = getContent(data);
+
 
     tippy(`#${itemName}`, {
         theme: 'item',

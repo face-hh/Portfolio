@@ -54,26 +54,29 @@
 
     <pre id="contents"></pre>
 
+    
     <div class="container">
         <p class='hello' style="font-size: 50px;font-weight: 700; text-align: center; margin-top: 49px;">Showcase</p>
         <p style="font-size: 25px;font-weight: 700; text-align: center; margin-top: 49px;">Tip: Hover 2 times to display information!</p>
 
         <ul class="filter-menu">
-            <li data-target="all">All</li>&nbsp;&nbsp;&nbsp;
-            <li data-target="db">Discord bots</li>&nbsp;&nbsp;&nbsp;
-            <li data-target="nodejs">NodeJS projects</li>&nbsp;&nbsp;&nbsp;
-            <li data-target="web">Websites</li>&nbsp;&nbsp;&nbsp;
+            <div data-target="all">All</div>&nbsp;&nbsp;&nbsp;
+            <div data-target="db">Discord bots</div>&nbsp;&nbsp;&nbsp;
+            <div data-target="nodejs">NodeJS projects</div>&nbsp;&nbsp;&nbsp;
+            <div data-target="web">Websites</div>&nbsp;&nbsp;&nbsp;
         </ul>
 
         <ul class="filter-item" id='items'>
-            <li data-item="db" id='versechaining'><img src="/assets/versechaining.png"></li>
-            <li data-item="db" id='onewordstory'><img src="/assets/onewordstory.png"></li>
-            <li data-item="nodejs" id='arraytojson'><img src="/assets/arraytojson.png"></li>
-            <li data-item="web" id='website'><img src="/assets/website.png"></li>
-            <li data-item="db" id='arbitrage'><img src="/assets/arbitrage.png"></li>
-            <li data-item="nodejs" id='mp4orgifcanvas'><img src="/assets/mp4orgifcanvas.png"></li>
-            <li data-item="db" id='acolium'><img src="/assets/acolium.png"></li>
-            <li data-item="nodejs" id='productfilter'><img src="/assets/productfilter.png"></li>
+            
+            <div class="popup" onclick="popup('popup')" data-item="db" id='versechaining'><img src="/assets/versechaining.png"></div>
+                <!-- <span id="popup" class="popuptext">Ok</span> -->
+            <div data-item="db" id='onewordstory'><img src="/assets/onewordstory.png"></div>
+            <div data-item="nodejs" id='arraytojson'><img src="/assets/arraytojson.png"></div>
+            <div data-item="web" id='website'><img src="/assets/website.png"></div>
+            <div data-item="db" id='arbitrage'><img src="/assets/arbitrage.png"></div>
+            <div data-item="nodejs" id='mp4orgifcanvas'><img src="/assets/mp4orgifcanvas.png"></div>
+            <div data-item="db" id='acolium'><img src="/assets/acolium.png"></div>
+            <div data-item="nodejs" id='productfilter'><img src="/assets/productfilter.png"></div>
         </ul>
     </div>
 
@@ -85,6 +88,7 @@
     <script src='/static/js/main.js'></script>
     <script src="/static/js/filter.js"></script>
     <script src="/static/js/hover.js"></script>
+
 
 </body>
 
