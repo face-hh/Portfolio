@@ -1,4 +1,6 @@
-title=<b style="color:#FF3366;">Arbitrage bot</b>
-description=Shows you the sell/buy price of <b style="color:#FF3366;">Binance</b>, <b style="color:#FF3366;">Kucoin</b>, <b style="color:#FF3366;">Wazirx</b>
-using their APIs, and displays the <b style="color:#FF3366;">difference</b> in Integer and Percentage
-within the <b style="color:#FF3366;">best to buy</b> and <b style="color:#FF3366;">sell</b>, with <b style="color:#FF3366;">pagination</b> on different cryptos!
+title=<b style="color:#FF668C;">Arbitrage bot</b>
+description=Shows you the sell/buy price of
+<br><b style="color:#FF668C;">Binance</b>, <b style="color:#FF668C;">Kucoin</b>, <b style="color:#FF668C;">Wazirx</b>
+using<br>their APIs, and displays the 
+<br><b style="color:#FF668C;">difference</b> in Integer and <br>Percentage
+within the <b style="color:#FF668C;">best to buy</b><br> and <b style="color:#FF668C;">sell</b>, with <b style="color:#FF668C;">pagination</b> on<br>different cryptos!

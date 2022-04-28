@@ -1,2 +1,2 @@
-title=<b style="color:#FF3366;">This website</b>
-description=Turns out I also made this website, my 2nd website which I am truly proud of!
+title=<b style="color:#FF668C;">This website</b>
+description=Turns out I also made this website

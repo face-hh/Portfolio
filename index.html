@@ -12,9 +12,9 @@
     <meta property="og:image" content="/assets/avatar.png">
     <meta property="og:url" content="https://facedev.xyz">
     <meta property="og:title" content="Face Dev">
-    <meta property="og:description"
-        content="The collection of my creations, documented in more detail.">
-    <link rel=icon href="https://cdn.discordapp.com/attachments/934187934167490570/968948574912143420/avatar.png" type="image/png">
+    <meta property="og:description" content="The collection of my creations, documented in more detail.">
+    <link rel=icon href="https://cdn.discordapp.com/attachments/934187934167490570/968948574912143420/avatar.png"
+        type="image/png">
 
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css">
@@ -29,12 +29,9 @@
 
 
     <div id='main'>
-        <div class="py-1" style="background-color: #FF3366;"></div>
-
         <div class="navbar padding mt-2">
 
-            <img width="40" class="logo" draggable="false" style='border-radius:20px'
-                src="/assets/avatar.png">
+            <img width="40" class="logo" draggable="false" style='border-radius:20px' src="/assets/avatar.png">
             <div class="ct padding mt-3 mb-4">
                 <div class="footer">
                     <span style="float: right; font-size: 18px;">
@@ -63,42 +60,56 @@
         <pre id="contents"></pre>
 
 
-        <div class="container">
-            <p class='hello' style="font-size: 50px;font-weight: 700; text-align: center; margin-top: 49px;">Showcase
+        <div id="parent">
+            <div id="showcase">
+                <!-- <div onclick="openNav('productfilter')" data-item="nodejs" id='productfilter'><img
+                        src="/assets/productfilter.png"></div> -->
+            </div>
 
-            <ul class="filter-menu">
-                <div data-target="all" class="neon-button">All</div>&nbsp;&nbsp;&nbsp;
-                <div data-target="db" class="neon-button">Discord bots</div>&nbsp;&nbsp;&nbsp;
-                <div data-target="nodejs" class="neon-button">NodeJS projects</div>&nbsp;&nbsp;&nbsp;
-                <div data-target="web" class="neon-button">Websites</div>&nbsp;&nbsp;&nbsp;
-            </ul>
+            <div class="container">
+                <p class='hello' style="font-size: 50px;font-weight: 700; text-align: center; margin-top: 49px;">
+                    Showcase
 
-            <ul class="filter-item" id='items'>
+                <ul class="filter-menu">
+                    <div data-target="all" class="neon-button">All</div>&nbsp;&nbsp;&nbsp;
+                    <div data-target="db" class="neon-button">Discord bots</div>&nbsp;&nbsp;&nbsp;
+                    <div data-target="nodejs" class="neon-button">NodeJS projects</div>&nbsp;&nbsp;&nbsp;
+                    <div data-target="web" class="neon-button">Websites</div>&nbsp;&nbsp;&nbsp;
+                </ul>
 
-                <div onclick="openNav('versechaining')" data-item="db" id='versechaining'><img
-                        src="/assets/versechaining.png"></div>
-                <div onclick="openNav('onewordstory')" data-item="db" id='onewordstory'><img
-                        src="/assets/onewordstory.png">
-                </div>
-                <div onclick="openNav('arraytojson')" data-item="nodejs" id='arraytojson'><img
-                        src="/assets/arraytojson.png"></div>
-                <div onclick="openNav('website')" data-item="web" id='website'><img src="/assets/website.png"></div>
-                <div onclick="openNav('arbitrage')" data-item="db" id='arbitrage'><img src="/assets/arbitrage.png">
-                </div>
-                <div onclick="openNav('mp4orgifcanvas')" data-item="nodejs" id='mp4orgifcanvas'><img
-                        src="/assets/mp4orgifcanvas.png"></div>
-                <div onclick="openNav('acolium')" data-item="db" id='acolium'><img src="/assets/acolium.png"></div>
-                <div onclick="openNav('productfilter')" data-item="nodejs" id='productfilter'><img
-                        src="/assets/productfilter.png"></div>
-            </ul>
+                <ul class="filter-item" id='items'>
+
+                    <div onclick="openNav('versechaining')" data-item="db" id='versechaining'><img
+                            src="/assets/versechaining.png"></div>
+                    <div onclick="openNav('onewordstory')" data-item="db" id='onewordstory'><img
+                            src="/assets/onewordstory.png">
+                    </div>
+                    <div onclick="openNav('arraytojson')" data-item="nodejs" id='arraytojson'><img
+                            src="/assets/arraytojson.png"></div>
+                    <div onclick="openNav('website')" data-item="web" id='website'><img src="/assets/website.png"></div>
+                    <div onclick="openNav('arbitrage')" data-item="db" id='arbitrage'><img src="/assets/arbitrage.png">
+                    </div>
+                    <div onclick="openNav('mp4orgifcanvas')" data-item="nodejs" id='mp4orgifcanvas'><img
+                            src="/assets/mp4orgifcanvas.png"></div>
+                    <div onclick="openNav('acolium')" data-item="db" id='acolium'><img src="/assets/acolium.png"></div>
+                    <div onclick="openNav('productfilter')" data-item="nodejs" id='productfilter'><img
+                            src="/assets/productfilter.png"></div>
+                </ul>
+            </div>
         </div>
-
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src='/static/js/main.js'></script>
         <script src="/static/js/filter.js"></script>
         <script>
+
+            let toBeClosed;
+            let savedNode;
+            let index;
+            let filteritem = document.querySelector('#items')
+            let container = document.querySelector('.container');
+            let newParent = document.getElementById('showcase');
 
             async function populatePre(url) {
                 let response;
@@ -119,7 +130,7 @@
             }
 
             async function openNav(arg) {
-
+                if (toBeClosed) closeNav();
                 let x = document.querySelector('.sidenav')
                 let y = x.outerHTML.split('\n').slice(0, 3)
                 y[y.length - 1] = '';
@@ -136,12 +147,35 @@
                 document.getElementById("mySidenav").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
                 document.body.style.backgroundColor = "rgba(6,4,17,0.95)";
+
+                const img = document.getElementById(arg);
+
+                img.style.transform = "scale(2.5)";
+                img.style.transition = "transform 0.25s ease";
+                toBeClosed = arg;
+                savedNode = img
+                container.classList.add('blur');
+                index = [...filteritem.children].indexOf(img);
+
+                newParent.appendChild(img);
+
+
+
             }
 
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
                 document.getElementById("main").style.marginLeft = "0";
                 document.body.style.backgroundColor = "rgba(6,4,17)";
+                const img = document.getElementById(toBeClosed);
+                img.style.transform = "scale(1)";
+                img.style.transition = "transform 0.25s ease";
+                toBeClosed = undefined;
+                container.classList.remove('blur');
+
+                filteritem.insertBefore(savedNode, filteritem.children[index])
+                newParent.removeChild(savedNode)
+                savedNode = undefined;
             }
         </script>
     </div>

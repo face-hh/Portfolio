@@ -1,11 +1,3 @@
-window.addEventListener(
-    'contextmenu',
-    function (e) {
-        e.preventDefault();
-    },
-    false,
-);
-
 document.getElementById('discord').addEventListener('click', function () {
     window.open('https://discord.gg/tm5hmEd4VE', '_blank').focus();
 });

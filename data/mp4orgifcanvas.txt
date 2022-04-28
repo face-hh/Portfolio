@@ -1,2 +1,5 @@
-title=<b style="color:#FF3366;">MP4 & GIF text writter</b>
-description=Splits the frames of an <b style="color:#FF3366;">MP4</b>, <b style="color:#FF3366;">writes text</b> on <b style="color:#FF3366;">each frame</b> and gathers them together into a <b style="color:#FF3366;">GIF</b> or <b style="color:#FF3366;">MP4</b>
+title=<b style="color:#FF668C;">MP4 & GIF text writter</b>
+description=Splits the frames of an <b style="color:#FF668C;">MP4</b>,
+<br><b style="color:#FF668C;">writes text</b> on <b style="color:#FF668C;">each frame</b> and
+<br>gathers them together into a <b style="color:#FF668C;">GIF</b>
+<br>or <b style="color:#FF668C;">MP4</b>

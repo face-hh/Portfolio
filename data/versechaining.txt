@@ -1,3 +1,5 @@
-title=<b style="color:#FF3366;">Verse chaining</b>
-description=A word game, also known as <b style="color:#FF3366;">Name The Last</b> where you have to give a name with the last letter of the last name given.
-Zoom in the image to see a more detailed explanation!
+title=<b style="color:#FF668C;">Verse chaining</b>
+description=A word game, also known as
+<br><b style="color:#FF668C;">Name The Last</b> where you have to
+<br>give a name with the last letter of
+<br>the last name given.
